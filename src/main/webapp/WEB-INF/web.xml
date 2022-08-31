@@ -3,4 +3,38 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
+
+
+    <description>
+        Test Site
+    </description>
+    <display-name>Test Site</display-name>
+
+    <servlet>
+        <servlet-name>Battery</servlet-name>
+        <servlet-class>com.capps096apps.jsp_practice.Battery</servlet-class>
+        <init-param>
+            <param-name>degradation_rate</param-name>
+            <param-value>0.2</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>degradation_duration</param-name>
+            <param-value>30</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>daily_usage</param-name>
+            <param-value>6</param-value>
+        </init-param>
+
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Battery</servlet-name>
+        <url-pattern>/Battery</url-pattern>
+    </servlet-mapping>
+
 </web-app>
+
+
